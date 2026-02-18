@@ -7,12 +7,13 @@ interface ContentRendererProps {
 
 export default function ContentRenderer({ sections }: ContentRendererProps) {
   return (
-    <div className="prose max-w-none mb-8">
+    <div className="space-y-5 text-slate-700 leading-relaxed">
       {sections.map((section, index) => {
         switch (section.type) {
           case "heading": {
             const level = section.level || 2;
-            const className = "text-2xl font-bold mt-6 mb-4 text-gray-800";
+            const className =
+              "text-2xl sm:text-3xl font-semibold mt-8 mb-3 text-slate-900";
             
             if (level === 2) {
               return (
@@ -42,7 +43,7 @@ export default function ContentRenderer({ sections }: ContentRendererProps) {
 
           case "text":
             return (
-              <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+              <p key={index} className="text-base sm:text-lg">
                 {section.content}
               </p>
             );
@@ -55,16 +56,16 @@ export default function ContentRenderer({ sections }: ContentRendererProps) {
                   alt={section.alt || ""}
                   width={800}
                   height={600}
-                  className="rounded-lg shadow-md"
+                  className="rounded-2xl border border-slate-200/80 shadow-sm"
                 />
               </div>
             );
 
           case "list":
             return (
-              <ul key={index} className="list-disc list-inside mb-4 space-y-2">
+              <ul key={index} className="list-disc list-inside space-y-2">
                 {section.items?.map((item, itemIndex) => (
-                  <li key={itemIndex} className="text-gray-700">
+                  <li key={itemIndex} className="text-base sm:text-lg">
                     {item}
                   </li>
                 ))}

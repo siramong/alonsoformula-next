@@ -2,6 +2,10 @@
 
 import { useState } from "react";
 import type { Exercise } from "@/lib/types";
+import Card from "@/components/ui/Card";
+import PrimaryButton from "@/components/ui/PrimaryButton";
+import SecondaryButton from "@/components/ui/SecondaryButton";
+import ExerciseOption from "@/components/ui/ExerciseOption";
 
 interface ExerciseCardProps {
   exercise: Exercise;
@@ -13,30 +17,33 @@ interface ExerciseCardProps {
 const translations = {
   es: {
     submit: "Enviar respuesta",
-    correct: "¡Correcto!",
-    incorrect: "Incorrecto",
+    correct: "¡Correcto! 🎉",
+    incorrect: "Incorrecto 😅",
     tryAgain: "Intentar de nuevo",
     nextExercise: "Siguiente ejercicio",
     explanation: "Explicación",
     selectAnswer: "Selecciona una respuesta",
+    earnedXP: "XP ganados",
   },
   ca: {
     submit: "Enviar resposta",
-    correct: "Correcte!",
-    incorrect: "Incorrecte",
+    correct: "Correcte! 🎉",
+    incorrect: "Incorrecte 😅",
     tryAgain: "Tornar a intentar",
     nextExercise: "Següent exercici",
     explanation: "Explicació",
     selectAnswer: "Selecciona una resposta",
+    earnedXP: "XP guanyats",
   },
   gl: {
     submit: "Enviar resposta",
-    correct: "Correcto!",
-    incorrect: "Incorrecto",
+    correct: "Correcto! 🎉",
+    incorrect: "Incorrecto 😅",
     tryAgain: "Intentar de novo",
     nextExercise: "Seguinte exercicio",
     explanation: "Explicación",
     selectAnswer: "Selecciona unha resposta",
+    earnedXP: "XP gañados",
   },
 };
 
@@ -71,76 +78,92 @@ export default function ExerciseCard({
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 mb-6">
-      <h3 className="text-xl font-semibold mb-4 text-gray-800">
-        {exercise.question}
-      </h3>
-
-      <div className="space-y-3 mb-4">
-        {exercise.options.map((option) => (
-          <label
-            key={option.id}
-            className={`block p-4 border rounded-lg cursor-pointer transition-colors ${
-              selectedAnswer === option.id
-                ? "border-primary-500 bg-primary-50"
-                : "border-gray-300 hover:border-primary-300"
-            } ${isSubmitted ? "pointer-events-none" : ""}`}
-          >
-            <input
-              type="radio"
-              name={exerciseId}
-              value={option.id}
-              checked={selectedAnswer === option.id}
-              onChange={(e) => setSelectedAnswer(e.target.value)}
-              disabled={isSubmitted}
-              className="mr-3"
-            />
-            <span className="text-gray-700">{option.text}</span>
-          </label>
-        ))}
+    <Card gradient className="p-8 sm:p-10 animate-slide-up">
+      <div className="space-y-3 mb-8">
+        <p className="text-xs font-bold uppercase tracking-widest text-primary-600">
+          {t.selectAnswer}
+        </p>
+        <h3 className="text-2xl sm:text-3xl font-black text-gray-900">
+          {exercise.question}
+        </h3>
       </div>
 
+      <fieldset className="mt-8 space-y-4">
+        <legend className="sr-only">{exercise.question}</legend>
+        {exercise.options.map((option) => {
+          const optionState = isSubmitted
+            ? option.id === exercise.correctAnswer
+              ? "correct"
+              : option.id === selectedAnswer
+              ? "incorrect"
+              : "default"
+            : "default";
+
+          return (
+            <ExerciseOption
+              key={option.id}
+              id={`${exerciseId}-${option.id}`}
+              name={exerciseId}
+              value={option.id}
+              label={option.text}
+              checked={selectedAnswer === option.id}
+              disabled={isSubmitted}
+              onChange={(e) => setSelectedAnswer(e.target.value)}
+              state={optionState}
+            />
+          );
+        })}
+      </fieldset>
+
       {!isSubmitted ? (
-        <button
-          onClick={handleSubmit}
-          disabled={!selectedAnswer}
-          className="w-full bg-primary-600 text-white py-3 rounded-lg font-semibold hover:bg-primary-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
-        >
-          {t.submit}
-        </button>
+        <div className="mt-8">
+          <PrimaryButton
+            onClick={handleSubmit}
+            disabled={!selectedAnswer}
+            className="w-full"
+          >
+            {t.submit}
+          </PrimaryButton>
+        </div>
       ) : (
-        <div>
+        <div className="mt-8 space-y-6 animate-fade-in" aria-live="polite">
           <div
-            className={`p-4 rounded-lg mb-4 ${
+            className={`rounded-3xl border-2 px-6 py-6 backdrop-blur ${
               isCorrect
-                ? "bg-green-100 border border-green-300"
-                : "bg-red-100 border border-red-300"
+                ? "border-success-300 bg-success-50 shadow-lg"
+                : "border-warning-300 bg-warning-50 shadow-lg"
             }`}
           >
             <p
-              className={`font-semibold ${
-                isCorrect ? "text-green-800" : "text-red-800"
+              className={`text-xl font-black ${
+                isCorrect ? "text-success-900" : "text-warning-900"
               }`}
             >
               {isCorrect ? t.correct : t.incorrect}
             </p>
             {exercise.explanation && (
-              <p className="mt-2 text-gray-700">
-                <strong>{t.explanation}:</strong> {exercise.explanation}
-              </p>
+              <div className="mt-4 space-y-2">
+                <p className="font-bold text-sm text-gray-800">{t.explanation}:</p>
+                <p className="text-gray-800 leading-relaxed">
+                  {exercise.explanation}
+                </p>
+              </div>
+            )}
+            {isCorrect && (
+              <div className="mt-4 flex items-center gap-2 text-success-900 font-bold">
+                <span className="text-2xl">⭐</span>
+                <span>+{exercise.xpReward || 10} {t.earnedXP}</span>
+              </div>
             )}
           </div>
 
           {!isCorrect && (
-            <button
-              onClick={handleReset}
-              className="w-full bg-gray-600 text-white py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
-            >
+            <SecondaryButton onClick={handleReset} className="w-full">
               {t.tryAgain}
-            </button>
+            </SecondaryButton>
           )}
         </div>
       )}
-    </div>
+    </Card>
   );
 }

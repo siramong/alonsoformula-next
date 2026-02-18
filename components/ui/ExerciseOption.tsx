@@ -39,7 +39,7 @@ export default function ExerciseOption({
   return (
     <label
       htmlFor={id}
-      className={`group flex cursor-pointer items-start gap-3 rounded-2xl border-2 px-4 py-4 text-left transition-all duration-200 transform hover:scale-102 active:scale-98 ${
+      className={`group flex cursor-pointer items-start gap-3 rounded-2xl border-2 px-4 py-4 text-left transition-all duration-200 transform hover:scale-105 active:scale-95 focus-within:ring-2 focus-within:ring-primary-400 focus-within:ring-offset-2 ${
         disabled ? "cursor-not-allowed opacity-70" : ""}
       ${stateStyles} ${interactiveStyles}`}
     >

@@ -1,0 +1,59 @@
+{
+  "title": "Alcanos",
+  "description": "Introducción a los alcanos: hidrocarburos saturados",
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "¿Qué son los alcanos?"
+    },
+    {
+      "type": "text",
+      "content": "Los alcanos son hidrocarburos saturados que contienen únicamente enlaces simples entre átomos de carbono. Su fórmula general es CnH2n+2."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Características principales"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Enlaces simples C-C y C-H",
+        "Geometría tetraédrica",
+        "Baja reactividad química",
+        "Solubilidad en disolventes no polares"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Los primeros miembros de la serie homóloga son: metano (CH4), etano (C2H6), propano (C3H8) y butano (C4H10)."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": "¿Cuál es la fórmula general de los alcanos?",
+      "options": [
+        { "id": "A", "text": "CnH2n+2" },
+        { "id": "B", "text": "CnH2n" },
+        { "id": "C", "text": "CnH2n-2" },
+        { "id": "D", "text": "CnHn" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Los alcanos son hidrocarburos saturados con fórmula general CnH2n+2.",
+      "xpReward": 15
+    },
+    {
+      "type": "true_false",
+      "question": "Los alcanos contienen enlaces dobles.",
+      "options": [
+        { "id": "true", "text": "Verdadero" },
+        { "id": "false", "text": "Falso" }
+      ],
+      "correctAnswer": "false",
+      "explanation": "Los alcanos solo contienen enlaces simples, por eso son hidrocarburos saturados.",
+      "xpReward": 10
+    }
+  ]
+}

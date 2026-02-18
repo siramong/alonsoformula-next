@@ -1,0 +1,59 @@
+{
+  "title": "Alcans",
+  "description": "Introducció als alcans: hidrocarburs saturats",
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Què són els alcans?"
+    },
+    {
+      "type": "text",
+      "content": "Els alcans són hidrocarburs saturats que contenen únicament enllaços simples entre àtoms de carboni. La seva fórmula general és CnH2n+2."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Característiques principals"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Enllaços simples C-C i C-H",
+        "Geometria tetraèdrica",
+        "Baixa reactivitat química",
+        "Solubilitat en dissolvents no polars"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Els primers membres de la sèrie homòloga són: metà (CH4), età (C2H6), propà (C3H8) i butà (C4H10)."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": "Quina és la fórmula general dels alcans?",
+      "options": [
+        { "id": "A", "text": "CnH2n+2" },
+        { "id": "B", "text": "CnH2n" },
+        { "id": "C", "text": "CnH2n-2" },
+        { "id": "D", "text": "CnHn" }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Els alcans són hidrocarburs saturats amb fórmula general CnH2n+2.",
+      "xpReward": 15
+    },
+    {
+      "type": "true_false",
+      "question": "Els alcans contenen enllaços dobles.",
+      "options": [
+        { "id": "true", "text": "Veritat" },
+        { "id": "false", "text": "Fals" }
+      ],
+      "correctAnswer": "false",
+      "explanation": "Els alcans només contenen enllaços simples, per això són hidrocarburs saturats.",
+      "xpReward": 10
+    }
+  ]
+}

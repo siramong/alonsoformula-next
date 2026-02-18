@@ -17,7 +17,7 @@ export function getProgress(): UserProgress {
       return JSON.parse(stored);
     }
   } catch (error) {
-    console.error("Error loading progress:", error);
+    console.error("Failed to load user progress from localStorage:", error);
   }
 
   return {
@@ -33,7 +33,7 @@ export function saveProgress(progress: UserProgress): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
   } catch (error) {
-    console.error("Error saving progress:", error);
+    console.error("Failed to save user progress to localStorage:", error);
   }
 }
 

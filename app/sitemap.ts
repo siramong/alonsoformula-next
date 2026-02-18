@@ -38,7 +38,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
           });
         });
     } catch (error) {
-      console.error(`Error reading content directory for ${lang}:`, error);
+      console.error(
+        `Failed to read content directory for ${lang} - sitemap may be incomplete:`,
+        error
+      );
     }
   });
 

@@ -101,7 +101,7 @@ export default function TopicsPage() {
           </h2>
           <p className="text-gray-700 max-w-lg mx-auto">
             Estamos trabajando para agregar más contenido de química orgánica. 
-            Próximamente: Alquenos, Alquinos, Alcoholes, y mucho más.
+            Próximamente: Alquinos, Aldehídos, Cetonas, Ácidos Carboxílicos, y mucho más.
           </p>
         </div>
       </main>

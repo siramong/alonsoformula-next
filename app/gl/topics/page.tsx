@@ -19,7 +19,7 @@ const topics = [
   {
     slug: "alquenos",
     title: "Alquenos",
-    description: "Hidrocarburos insaturados con dobres enlaces",
+    description: "Hidrocarburos insaturados con dobles enlaces",
     emoji: "⚡",
     category: "Hidrocarburos",
     difficulty: "Básico",

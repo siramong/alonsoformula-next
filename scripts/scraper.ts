@@ -146,13 +146,14 @@ export async function scrapeMultiplePages(urls: Record<string, string>, lang: st
  * 
  * ```bash
  * npm install cheerio
- * ts-node lib/scraper.ts
+ * cd scripts
+ * ts-node scraper.ts
  * ```
  * 
- * Or create a scraping script:
+ * Or create a scraping script in the scripts directory:
  * 
  * ```typescript
- * import { scrapeMultiplePages } from './lib/scraper';
+ * import { scrapeMultiplePages } from './scraper';
  * 
  * const urls = {
  *   'alcanos': 'https://www.alonsoformula.com/organica/alcanos.htm',

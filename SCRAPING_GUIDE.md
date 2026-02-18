@@ -15,7 +15,7 @@ npm install cheerio
 npm install --save-dev @types/cheerio
 ```
 
-2. The scraper is located at `lib/scraper.ts`
+2. The scraper is located at `scripts/scraper.ts`
 
 ## Usage
 
@@ -24,7 +24,7 @@ npm install --save-dev @types/cheerio
 Create a file called `scripts/scrape.ts`:
 
 ```typescript
-import { scrapeMultiplePages, TOPICS_TO_SCRAPE } from '../lib/scraper';
+import { scrapeMultiplePages, TOPICS_TO_SCRAPE } from './scraper';
 
 const BASE_URL = 'https://www.alonsoformula.com';
 
@@ -57,7 +57,7 @@ npx ts-node scripts/scrape.ts
 For individual pages:
 
 ```typescript
-import { scrapePage } from '../lib/scraper';
+import { scrapePage } from './scraper';
 import fs from 'fs';
 
 const content = await scrapePage('https://www.alonsoformula.com/organica/alcanos.htm');

@@ -61,7 +61,7 @@
         { "id": "false", "text": "Falso" }
       ],
       "correctAnswer": "true",
-      "explanation": "Los alquenos son más reactivos que los alcanos debido a la presencia del doble enlace, que es más débil que un enlace simple.",
+      "explanation": "Los alquenos son más reactivos que los alcanos debido a la presencia del doble enlace, que tiene electrones π más accesibles para reacciones químicas.",
       "xpReward": 10
     },
     {

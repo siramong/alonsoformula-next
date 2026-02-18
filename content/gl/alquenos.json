@@ -1,0 +1,81 @@
+{
+  "title": "Alquenos",
+  "description": "Hidrocarburos insaturados con dobles enlaces carbono-carbono",
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "¿Qué son los alquenos?"
+    },
+    {
+      "type": "text",
+      "content": "Los alquenos son hidrocarburos insaturados que contienen al menos un doble enlace carbono-carbono. Su fórmula general es CnH2n. También se les conoce como olefinas."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Características principales"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Contienen al menos un doble enlace C=C",
+        "Geometría trigonal plana alrededor del doble enlace",
+        "Más reactivos que los alcanos",
+        "Pueden presentar isomería geométrica (cis-trans)"
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Los primeros miembros de la serie son: eteno (C2H4), propeno (C3H6), buteno (C4H8). El eteno es el alqueno más simple y uno de los compuestos orgánicos más producidos industrialmente."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Nomenclatura"
+    },
+    {
+      "type": "text",
+      "content": "Para nombrar alquenos se usa el sufijo -eno. Se debe indicar la posición del doble enlace con el número más bajo posible."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": "¿Cuál es la fórmula general de los alquenos?",
+      "options": [
+        { "id": "A", "text": "CnH2n+2" },
+        { "id": "B", "text": "CnH2n" },
+        { "id": "C", "text": "CnH2n-2" },
+        { "id": "D", "text": "CnHn" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Los alquenos tienen fórmula general CnH2n debido a la presencia de un doble enlace.",
+      "xpReward": 15
+    },
+    {
+      "type": "true_false",
+      "question": "Los alquenos son más reactivos que los alcanos.",
+      "options": [
+        { "id": "true", "text": "Verdadero" },
+        { "id": "false", "text": "Falso" }
+      ],
+      "correctAnswer": "true",
+      "explanation": "Los alquenos son más reactivos que los alcanos debido a la presencia del doble enlace, que es más débil que un enlace simple.",
+      "xpReward": 10
+    },
+    {
+      "type": "multiple_choice",
+      "question": "¿Qué tipo de isomería pueden presentar los alquenos?",
+      "options": [
+        { "id": "A", "text": "Isomería óptica" },
+        { "id": "B", "text": "Isomería geométrica (cis-trans)" },
+        { "id": "C", "text": "Tautomería" },
+        { "id": "D", "text": "Metamería" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Los alquenos pueden presentar isomería geométrica (cis-trans) debido a la restricción de rotación alrededor del doble enlace.",
+      "xpReward": 20
+    }
+  ]
+}

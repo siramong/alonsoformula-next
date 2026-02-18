@@ -1,0 +1,84 @@
+{
+  "title": "Alcoholes",
+  "description": "Compuestos orgánicos que contienen grupos hidroxilo (-OH)",
+  "sections": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "¿Qué son los alcoholes?"
+    },
+    {
+      "type": "text",
+      "content": "Los alcoholes son compuestos orgánicos que contienen uno o más grupos hidroxilo (-OH) unidos a átomos de carbono saturados. Son derivados de los hidrocarburos por sustitución de uno o más átomos de hidrógeno por grupos hidroxilo."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Clasificación"
+    },
+    {
+      "type": "text",
+      "content": "Los alcoholes se clasifican según el número de grupos -OH y el tipo de carbono al que están unidos:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Primarios: El grupo -OH está unido a un carbono primario",
+        "Secundarios: El grupo -OH está unido a un carbono secundario",
+        "Terciarios: El grupo -OH está unido a un carbono terciario"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Propiedades"
+    },
+    {
+      "type": "text",
+      "content": "Los alcoholes tienen puntos de ebullición más altos que los alcanos de masa molecular similar debido a los enlaces de hidrógeno. Son solubles en agua (especialmente los de bajo peso molecular) y actúan como ácidos y bases débiles."
+    },
+    {
+      "type": "text",
+      "content": "Ejemplos comunes incluyen el metanol (CH3OH), etanol (C2H5OH) y propanol (C3H7OH)."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "question": "¿Qué grupo funcional caracteriza a los alcoholes?",
+      "options": [
+        { "id": "A", "text": "Grupo carbonilo (-C=O)" },
+        { "id": "B", "text": "Grupo hidroxilo (-OH)" },
+        { "id": "C", "text": "Grupo amino (-NH2)" },
+        { "id": "D", "text": "Grupo carboxilo (-COOH)" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Los alcoholes se caracterizan por tener uno o más grupos hidroxilo (-OH).",
+      "xpReward": 15
+    },
+    {
+      "type": "multiple_choice",
+      "question": "¿Cómo se clasifica un alcohol donde el -OH está unido a un carbono con dos carbonos unidos?",
+      "options": [
+        { "id": "A", "text": "Alcohol primario" },
+        { "id": "B", "text": "Alcohol secundario" },
+        { "id": "C", "text": "Alcohol terciario" },
+        { "id": "D", "text": "Alcohol cuaternario" }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Un alcohol secundario tiene el grupo -OH unido a un carbono secundario (unido a dos carbonos).",
+      "xpReward": 20
+    },
+    {
+      "type": "true_false",
+      "question": "Los alcoholes tienen puntos de ebullición más bajos que los alcanos de masa similar.",
+      "options": [
+        { "id": "true", "text": "Verdadero" },
+        { "id": "false", "text": "Falso" }
+      ],
+      "correctAnswer": "false",
+      "explanation": "Los alcoholes tienen puntos de ebullición más altos que los alcanos de masa similar debido a los enlaces de hidrógeno.",
+      "xpReward": 10
+    }
+  ]
+}

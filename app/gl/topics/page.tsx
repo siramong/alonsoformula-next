@@ -16,6 +16,22 @@ const topics = [
     category: "Hidrocarburos",
     difficulty: "Básico",
   },
+  {
+    slug: "alquenos",
+    title: "Alquenos",
+    description: "Hidrocarburos insaturados con dobres enlaces",
+    emoji: "⚡",
+    category: "Hidrocarburos",
+    difficulty: "Básico",
+  },
+  {
+    slug: "alcoholes",
+    title: "Alcoholes",
+    description: "Compostos orgánicos con grupos hidroxilo (-OH)",
+    emoji: "🧪",
+    category: "Grupos Funcionais",
+    difficulty: "Intermedio",
+  },
 ];
 
 export default function TopicsPage() {

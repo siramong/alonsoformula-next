@@ -16,7 +16,22 @@ const topics = [
     category: "Hidrocarburos",
     difficulty: "Básico",
   },
-  // More topics will be added via scraping
+  {
+    slug: "alquenos",
+    title: "Alquenos",
+    description: "Hidrocarburos insaturados con dobles enlaces",
+    emoji: "⚡",
+    category: "Hidrocarburos",
+    difficulty: "Básico",
+  },
+  {
+    slug: "alcoholes",
+    title: "Alcoholes",
+    description: "Compuestos orgánicos con grupos hidroxilo (-OH)",
+    emoji: "🧪",
+    category: "Grupos Funcionales",
+    difficulty: "Intermedio",
+  },
 ];
 
 export default function TopicsPage() {

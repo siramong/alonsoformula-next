@@ -16,6 +16,22 @@ const topics = [
     category: "Hidrocarburs",
     difficulty: "Bàsic",
   },
+  {
+    slug: "alquenos",
+    title: "Alquens",
+    description: "Hidrocarburs insaturats amb dobles enllaços",
+    emoji: "⚡",
+    category: "Hidrocarburs",
+    difficulty: "Bàsic",
+  },
+  {
+    slug: "alcoholes",
+    title: "Alcohols",
+    description: "Compostos orgànics amb grups hidroxil (-OH)",
+    emoji: "🧪",
+    category: "Grups Funcionals",
+    difficulty: "Intermedi",
+  },
 ];
 
 export default function TopicsPage() {

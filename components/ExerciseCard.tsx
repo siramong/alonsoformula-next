@@ -78,12 +78,12 @@ export default function ExerciseCard({
   };
 
   return (
-    <Card gradient className="p-8 sm:p-10 animate-slide-up">
+    <div className="card-glass p-8 sm:p-10 rounded-3xl animate-slide-up">
       <div className="space-y-3 mb-8">
-        <p className="text-xs font-bold uppercase tracking-widest text-primary-600">
+        <p className="text-xs font-bold uppercase tracking-widest text-purple-400">
           {t.selectAnswer}
         </p>
-        <h3 className="text-2xl sm:text-3xl font-black text-gray-900">
+        <h3 className="text-2xl sm:text-3xl font-black text-white">
           {exercise.question}
         </h3>
       </div>
@@ -117,53 +117,56 @@ export default function ExerciseCard({
 
       {!isSubmitted ? (
         <div className="mt-8">
-          <PrimaryButton
+          <button
             onClick={handleSubmit}
             disabled={!selectedAnswer}
-            className="w-full"
+            className="w-full px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 text-white font-bold rounded-2xl shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/70 transform hover:scale-105 active:scale-95 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 disabled:shadow-none"
           >
             {t.submit}
-          </PrimaryButton>
+          </button>
         </div>
       ) : (
         <div className="mt-8 space-y-6 animate-fade-in" aria-live="polite">
           <div
-            className={`rounded-3xl border-2 px-6 py-6 backdrop-blur ${
+            className={`rounded-3xl border-2 px-8 py-6 backdrop-blur ${
               isCorrect
-                ? "border-success-300 bg-success-50 shadow-lg"
-                : "border-warning-300 bg-warning-50 shadow-lg"
+                ? "border-green-500/50 bg-green-500/10"
+                : "border-red-500/50 bg-red-500/10"
             }`}
           >
             <p
-              className={`text-xl font-black ${
-                isCorrect ? "text-success-900" : "text-warning-900"
+              className={`text-2xl font-black mb-4 ${
+                isCorrect ? "text-green-400" : "text-red-400"
               }`}
             >
               {isCorrect ? t.correct : t.incorrect}
             </p>
             {exercise.explanation && (
               <div className="mt-4 space-y-2">
-                <p className="font-bold text-sm text-gray-800">{t.explanation}:</p>
-                <p className="text-gray-800 leading-relaxed">
+                <p className="font-bold text-sm text-gray-300">{t.explanation}:</p>
+                <p className="text-gray-300 leading-relaxed text-lg">
                   {exercise.explanation}
                 </p>
               </div>
             )}
             {isCorrect && (
-              <div className="mt-4 flex items-center gap-2 text-success-900 font-bold">
-                <span className="text-2xl">⭐</span>
+              <div className="mt-6 flex items-center gap-3 text-yellow-400 font-bold text-lg">
+                <span className="text-3xl">⭐</span>
                 <span>+{exercise.xpReward || 10} {t.earnedXP}</span>
               </div>
             )}
           </div>
 
           {!isCorrect && (
-            <SecondaryButton onClick={handleReset} className="w-full">
+            <button
+              onClick={handleReset}
+              className="w-full px-8 py-4 bg-slate-800/50 backdrop-blur text-white font-bold rounded-2xl border-2 border-purple-500/30 hover:border-purple-500/60 hover:bg-slate-800/70 transform hover:scale-105 active:scale-95 transition-all"
+            >
               {t.tryAgain}
-            </SecondaryButton>
+            </button>
           )}
         </div>
       )}
-    </Card>
+    </div>
   );
 }

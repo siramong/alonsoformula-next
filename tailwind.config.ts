@@ -9,8 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)", "ui-serif", "Georgia", "serif"],
+        sans: [
+          "ui-sans-serif", 
+          "system-ui", 
+          "-apple-system", 
+          "BlinkMacSystemFont", 
+          "Segoe UI", 
+          "Roboto", 
+          "Helvetica Neue", 
+          "Arial", 
+          "sans-serif"
+        ],
       },
       colors: {
         primary: {
